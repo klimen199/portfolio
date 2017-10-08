@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Klimenkov's portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body id="body">
+    <div class="background"></div>
+    <div class="background"></div>
+    <div id="pageWrapper">
+        <div id="menu">
+            <div id="menuHeader">
+                Vlad Klimenkov
+            </div>
+            <div id="menuContent">
+                <ul>
+                    <li><a class="show-0" href="#">HOME</a></li>
+                    <li><a class="show-1" href="#">ABOUT ME</a></li>
+                    <li><a class="show-2" href="#">PORTFOLIO</a></li>
+                    <li><a class="show-3" href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div id="menuFooter">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+            <div id="prevSl" class="btnSl"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+            <div id="nextSl" class="btnSl"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+
+        </div>
+
+        <div id="content">
+            <div>
+
+            </div>
+            <div class="show-1">
+
+            </div>
+            <div class="show-2" id="show2">
+                <div class="exampleIcon" data-ex="notes">Список задач</div>
+                <div class="exampleIcon" data-ex="timer">Количество дней до события</div>
+                <div class="exampleIcon" data-ex="calculator">Калькулятор</div>
+                <div class="exampleIcon" data-ex="calendar">Календарь</div>
+                <div class="exampleIcon" data-ex="gameInNum">Игра в числа (на внимательность)</div>
+                <div class="exampleIcon" data-ex="ttt">Крестики нолики</div>
+                <div class="exampleIcon" data-ex="view1">Опрос (вариант 1)</div>
+                <div class="exampleIcon" data-ex="view2">Опрос (вариант 2)</div>
+            </div>
+            <div class="show-3">
+
+            </div>
+        </div>
+
+        <div id="clock">00:00:00</div>
+        <button id="up" class="up-downBtn"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+        <button id="down" class="up-downBtn"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+    </div>
+
+    <!-- Main JS -->
+    <script src="scripts/mainJS.js"></script>
+    <!-- JQuery -->
+    <script src="scripts/jquery-3.2.1.js"></script>
+    <!-- Polyfill for HTML Imports-->
+    <script src="scripts/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <!--<link rel="import" id="work1" href="exampleWorks/notes/notes.html">-->
+    <link rel="import" id="timer" href="exampleWorks/timer/timer.html">
+    <link rel="import" id="calculator" href="exampleWorks/calculator/calculator.html">
+    <link rel="import" id="calendar" href="exampleWorks/calendar/calendar.html">
+    <link rel="import" id="gameInNum" href="exampleWorks/gameInNum/gameInNum.html">
+    <link rel="import" id="ticTacToe" href="exampleWorks/ticTacToe/ticTacToe.html">
+    <!--<link rel="import" id="work7" href="exampleWorks/interviews/interview1.html">-->
+    <!--<link rel="import" id="work8" href="exampleWorks/interviews/interview2.html">-->
+
+</body>
+</html>

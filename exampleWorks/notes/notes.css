@@ -1,0 +1,29 @@
+#notes{
+    width: 200px;
+    border: solid 2px;
+}
+#notesInp{
+    margin: 3px;
+    width: 190px;
+}
+#notes > div{
+    border: solid 2px;
+    margin: -1px;
+}
+.noteDelBtn{
+    border: solid 1px red;
+    border-radius: 50%;
+    color: red;
+    background: none;
+    float: right;
+}
+.noteDelBtn:hover{
+    background-color: rgba(255, 0, 0, 0.2);
+    cursor: pointer;
+}
+.noteCheckbox:hover{
+    cursor: pointer;
+}
+.madeNote{
+    text-decoration: line-through;
+}

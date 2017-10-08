@@ -1,0 +1,36 @@
+#calendar{
+    border: solid 1px;
+    width: 240px;
+    height: auto;
+    position: relative;
+    text-align: center;
+}
+.selected{
+    background-color: #003030;
+    color: white;
+    border: dotted 1px gray;
+}
+#calendTop{
+    margin: 5px;
+    text-align: left;
+}
+.calendNavig{
+    background: inherit;
+}
+#navig{
+    position: absolute;
+    right:5px;
+    top: 5px;
+}
+#weekDay{
+    border: solid 1px;
+    background-color: #b5b8b8;
+}
+.dayCell, #weekDay > div{
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+}
+.dayCell{
+    margin: 0 2px;
+}

@@ -1,0 +1,30 @@
+#tic-tac-toe{
+    margin: inherit;
+    position: relative;
+}
+#game{
+    width: 154px;
+    /*margin: 0 auto;*/
+}
+.XOceil{
+    width: 50px;
+    height: 50px;
+    border: solid 2px;
+    display: inline-block;
+    margin: -0.5px -3px;
+    text-align: center;
+    vertical-align: middle;
+    font: 700 32px/50px sans-serif;
+}
+.XOceil:hover{
+    background-color: #BCBCBC;
+    cursor: pointer;
+}
+#result{
+    width: 120px;
+    border: solid 1px;
+    position: absolute;
+    left: 200px;
+    text-align: center;
+    line-height: 1em;
+}

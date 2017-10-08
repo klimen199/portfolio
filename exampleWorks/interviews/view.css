@@ -1,0 +1,23 @@
+#interview1{
+    display: inline-block;
+    width: 400px;
+}
+#interview2{
+    display: inline-block;
+    width: 400px;
+}
+#jsTestBtn{
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 800px){
+    #interview1{
+        float: left;
+    }
+    #interview2 + div{
+        clear: left;
+    }
+}
+#fQuest{
+    display: none;
+}
