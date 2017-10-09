@@ -3,7 +3,6 @@ let count =0,
     arrBacksLen,
     backTimer;
 
-
 window.addEventListener('load', function () {
 
     //  background slider
@@ -67,6 +66,9 @@ window.addEventListener('load', function () {
             ':' + checkDateFormat(now.getMinutes()) +
             ':' + checkDateFormat(now.getSeconds());
     }
+
+
+
 
 });
 
@@ -152,29 +154,16 @@ function displayWorks() {
         }
     }
 }
-
-function addImport(val, arr) {
-    alert('0');
-    if(!addImport.cache[val]){
-        let link = document.createElement('link');
-        link.setAttribute('rel','import');
-        link.setAttribute('id','work1');
-        link.setAttribute('href','exampleWorks/'+val+'/'+val+'.html');
-        // $(link).attr({'rel':'import','href':'exampleWorks/notes/notes.html'});
-        alert('2');
-        // link.setAttribute({'rel':'import','href':'exampleWorks/'+val+'/'+val+'.html'})
-        document.body.appendChild(link);
-        alert('3')
-    }
-}
-addImport.cache={};
-
-alert('lol');
-addImport('notes',0);
-alert('lol2');
-
+// function addImport(val, arr) {
+//     if(!addImport.cache[val]){
+//         let link = document.createElement('link');
+//         link.setAttribute('rel','import');
+//         $(link).attr()
+//         link.setAttribute({'rel':'import','href':'exampleWorks/'+val+'/'+val+'.html'})
+//     }
+// }
 function initImports(arr) {
-    // arr.push(document.querySelector('link#work1').import.querySelector('#notes'));
+    arr.push(document.querySelector('link#work1').import.querySelector('#notes'));
     arr.push(document.querySelector('link#work2').import.querySelector('#timer'));
     arr.push(document.querySelector('link#work3').import.querySelector('#calculator'));
     arr.push(document.querySelector('link#work4').import.querySelector('#calendar'));
