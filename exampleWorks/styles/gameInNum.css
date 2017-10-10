@@ -1,8 +1,11 @@
-#gameNumbers{
+#gameInNum{
     border: dotted;
     text-align: center;
     width: 600px;
 }
+/*div{*/
+    /*background-color: aqua;*/
+/*}*/
 #startGameNumbers{
     display: none;
 }

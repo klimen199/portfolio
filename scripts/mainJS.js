@@ -48,14 +48,7 @@ window.addEventListener('load', function () {
     };
 
     // display portfolio works
-    if ("import" in document.createElement("link")){
-        console.log('with import');
-        displayWorks();
-    }
-    else{
-        console.log('without import');
-        window.addEventListener('WebComponentsReady', displayWorks);
-    }
+    displayWorks();
 
     //  clocks
     let clockElem = getId('clock');
@@ -101,11 +94,8 @@ function displayWorks() {
     let show2Elem = getId('show2'),
         exIcons = $('div.show-2 > .exampleIcon'),
         exIconsLast = exIcons.length-1,
-        blockRowPrev,
-        worksArr =[];
+        blockRowPrev;
 
-    initImports(worksArr);
-    let worksNum = worksArr.length;
     let newElem = document.createElement('div');
     newElem.classList.add('examples');
     newElem.setAttribute('background-color','green');
@@ -137,13 +127,25 @@ function displayWorks() {
             if(jqDiv.hasClass('selected')) isOneSelected++;
 
             let val = jqDiv.attr('data-ex');
-
-            for (let i =0; i < worksNum;i++){
-                if(worksArr[i].getAttribute('data-ex') == val){
-                    selectedWork = worksArr[i];
-                    break;
+            let cur = getId(val);
+            if(!cur.classList.contains('init')){
+                let js = document.createElement('script');
+                let css = document.createElement('link');
+                css.rel = 'stylesheet';
+                if(val == 'view1' || val == 'view2'){
+                    js.src='exampleWorks/scripts/view.js';
+                    css.setAttribute('href','exampleWorks/styles/view.css');
                 }
+                else{
+                    js.src='exampleWorks/scripts/'+val+'.js';
+                    css.setAttribute('href','exampleWorks/styles/'+val+'.css');
+                }
+                cur.appendChild(js);
+                cur.appendChild(css);
+                cur.classList.add('init');
             }
+            selectedWork = cur.cloneNode(true);
+
             jqNewElem.html(selectedWork);
             if (removes == 0 && isOneSelected == 0) jqNewElem.slideUp(1000);
             if (removes != 0 && isOneSelected == 1) jqNewElem.hide();
@@ -153,24 +155,6 @@ function displayWorks() {
             blockRowPrev = blockRow;
         }
     }
-}
-// function addImport(val, arr) {
-//     if(!addImport.cache[val]){
-//         let link = document.createElement('link');
-//         link.setAttribute('rel','import');
-//         $(link).attr()
-//         link.setAttribute({'rel':'import','href':'exampleWorks/'+val+'/'+val+'.html'})
-//     }
-// }
-function initImports(arr) {
-    arr.push(document.querySelector('link#work1').import.querySelector('#notes'));
-    arr.push(document.querySelector('link#work2').import.querySelector('#timer'));
-    arr.push(document.querySelector('link#work3').import.querySelector('#calculator'));
-    arr.push(document.querySelector('link#work4').import.querySelector('#calendar'));
-    arr.push(document.querySelector('link#work5').import.querySelector('#gameNumbers'));
-    arr.push(document.querySelector('link#work6').import.querySelector('#tic-tac-toe'));
-    arr.push(document.querySelector('link#work7').import.querySelector('#interview1'));
-    arr.push(document.querySelector('link#work8').import.querySelector('#interview2'));
 }
 
     // clocks

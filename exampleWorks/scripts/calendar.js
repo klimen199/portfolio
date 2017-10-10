@@ -1,7 +1,8 @@
 "use strict";
-let now = new Date();
 (function () {
-    let curDay = now.getDate(),
+    let nowt = new Date();
+
+    let curDay = nowt.getDate(),
         posCurDay,
         used = false,
         monthList = ['Январь','Февраль','Март','Апрель','Май','Июнь',
@@ -37,27 +38,27 @@ let now = new Date();
         calendEl.appendChild(dayCell);
         arrDayCell.push(dayCell);
     }
-    fillCalendar(now,now.getMonth(),arrDayCell, clicks);
+    fillCalendar(nowt,nowt.getMonth(),arrDayCell, clicks);
 
     prevM.onclick = function () {
         clicks--;
-        let m = now.getMonth();
+        let m = nowt.getMonth();
         if(m==0) m = 12;
-        now.setMonth(--m);
+        nowt.setMonth(--m);
         refreshY_M(calendTop);
-        fillCalendar(now,m,arrDayCell,clicks);
+        fillCalendar(nowt,m,arrDayCell,clicks);
     };
     nextM.onclick = function () {
         clicks++;
-        let m = now.getMonth();
+        let m = nowt.getMonth();
         if(m==11) m = -1;
-        now.setMonth(++m);
+        nowt.setMonth(++m);
         refreshY_M(calendTop);
-        fillCalendar(now,m,arrDayCell,clicks);
+        fillCalendar(nowt,m,arrDayCell,clicks);
     };
 
     function fillCalendar(date,m,cellArr, clicks) {
-        let fWeekday = getFirstMonthWeekday(now.getFullYear(),now.getMonth()),
+        let fWeekday = getFirstMonthWeekday(nowt.getFullYear(),nowt.getMonth()),
             daysInM = date.daysInMonth(m),
             i;
         (fWeekday == 0)?(fWeekday=6):(fWeekday--);
@@ -99,7 +100,7 @@ let now = new Date();
     }
 
     function getY_M() {
-        return now.getFullYear() + ' ' + monthList[now.getMonth()];
+        return nowt.getFullYear() + ' ' + monthList[nowt.getMonth()];
     }
 
 })();

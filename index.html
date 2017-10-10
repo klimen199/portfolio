@@ -45,6 +45,141 @@
                 <div class="exampleIcon" data-ex="ttt">Крестики нолики</div>
                 <div class="exampleIcon" data-ex="view1">Опрос (вариант 1)</div>
                 <div class="exampleIcon" data-ex="view2">Опрос (вариант 2)</div>
+
+                <div id="examplWork">
+                    <div id="notes" class="examplWork" data-ex="notes">
+                        <input type="text" id="notesInp" placeholder="Введите заметку">
+                    </div>
+                    <div id="timer" class="examplWork" data-ex="timer">
+                        До моего ДР осталось:<br>
+                        <span id="day">0</span> дней<br>
+                        <span id="hour">0</span> часов<br>
+                        <span id="min">0</span> минут<br>
+                        <span id="sec">0</span> секунд
+                    </div>
+                    <div id="ttt" class="examplWork" data-ex="ttt" aria-disabled="true">
+                        <div id="result">
+                            <p>Выиграл <strong>X</strong>: <span class="ticTacResult">0</span></p>
+                            <p>Выиграл <strong>O</strong>: <span class="ticTacResult">0</span></p>
+                            <p>Ничья: <span class="ticTacResult">0</span></p>
+                        </div>
+                        <div id="XOgame">
+                            <div class="XOceil" datatype="0"></div>
+                            <div class="XOceil" datatype="1"></div>
+                            <div class="XOceil" datatype="2"></div><br>
+                            <div class="XOceil" datatype="3"></div>
+                            <div class="XOceil" datatype="4"></div>
+                            <div class="XOceil" datatype="5"></div><br>
+                            <div class="XOceil" datatype="6"></div>
+                            <div class="XOceil" datatype="7"></div>
+                            <div class="XOceil" datatype="8"></div>
+                        </div>
+                        <p id="turn">Ходит <strong>X</strong></p>
+                        <button id="reset">Начать сначала</button>
+                    </div>
+                    <div id="gameInNum" class="examplWork" data-ex="gameInNum">
+                        <div id="timerGameNumbers">
+                            Начиная с цифры "1" нажимайте до тех пор, пока не дойдете до последнего
+                        </div>
+                        <table id="tableGameNumbers"></table>
+                        <button id="beginGameNumbers">Начать играть</button>
+                        <button id="startGameNumbers">Начать сначала</button>
+                    </div>
+                    <div id="calculator" class="examplWork" data-ex="calculator">
+                        <div>
+                            <button class="calcBtn" id="calcClearBtn">c</button>
+                            <input id='calcBoard' type="text" disabled="true">
+                        </div>
+                        <button class="calcBtn">7</button>
+                        <button class="calcBtn">8</button>
+                        <button class="calcBtn">9</button>
+                        <button class="calcBtn">/</button><br>
+                        <button class="calcBtn">4</button>
+                        <button class="calcBtn">5</button>
+                        <button class="calcBtn">6</button>
+                        <button class="calcBtn">*</button><br>
+                        <button class="calcBtn">1</button>
+                        <button class="calcBtn">2</button>
+                        <button class="calcBtn">3</button>
+                        <button class="calcBtn">-</button><br>
+                        <button class="calcBtn">0</button>
+                        <button class="calcBtn">.</button>
+                        <button class="calcBtn">=</button>
+                        <button class="calcBtn">+</button>
+                    </div>
+                    <div id="calendar" class="examplWork" data-ex="calendar">
+                        <div id="calendTop">гг мм</div>
+                        <div id="navig">
+                            <button class="calendNavig" id="prevM">&larr;</button>
+                            <button class="calendNavig" id="nextM">&rarr;</button>
+                        </div>
+                        <div id="weekDay">
+                            <div>Пн</div>
+                            <div>Вт</div>
+                            <div>Ср</div>
+                            <div>Чт</div>
+                            <div>Пт</div>
+                            <div>Сб</div>
+                            <div>Вс</div>
+                        </div>
+                    </div>
+                    <div id="view1" class="examplWork" data-ex="view1">
+                        <ul id="mainList">
+                            <li>JavaScript это тоже самое что и Java?
+                                <form class="jsTest">
+                                    <input type="radio" name="fAnswer" data-truth="true">Нет.
+                                    <br><input type="radio" name="fAnswer" data-truth="false">Да.
+                                    <br><input type="radio" name="fAnswer" data-truth="false">Не знаю.
+                                </form>
+                            </li>
+                            <li>Сколько параментров можно передавать в фукнцию?
+                                <form class="jsTest">
+                                    <input type="radio" name="sAnswer" data-truth="false">Столько, сколько указано при ее созданиии.
+                                    <br><input type="radio" name="sAnswer" data-truth="false">Минимум 1.
+                                    <br><input type="radio" name="sAnswer" data-truth="true">Сколько угодно.
+                                    <br><input type="radio" name="sAnswer" data-truth="false">Не знаю.
+                                </form>
+                            </li>
+                            <li>Что такое: "use strict"?
+                                <form class="jsTest">
+                                    <input type="radio" name="thAnswer" data-truth="false">Просто строка.
+                                    <br><input type="radio" name="thAnswer" data-truth="false">Фукцния-литерал.
+                                    <br><input type="radio" name="thAnswer" data-truth="true">Строгий режим.
+                                    <br><input type="radio" name="thAnswer" data-truth="false">Не знаю.
+                                </form>
+                            </li>
+                        </ul>
+                        <button id="jsTestBtn">Проверить</button>
+                    </div>
+                    <div id="view2" class="examplWork" data-ex="view2">
+                        <div class="int2">JavaScript это тоже самое что и Java?
+                            <form class="jsTest2">
+                                <input type="radio" name="fAnswer" data-truth="true">Нет.
+                                <br><input type="radio" name="fAnswer" data-truth="false">Да.
+                                <br><input type="radio" name="fAnswer" data-truth="false">Не знаю.
+                            </form>
+                        </div>
+                        <div class="int2" style="display: none">Сколько параментров можно передавать в фукнцию?
+                            <form class="jsTest2">
+                                <input type="radio" name="sAnswer" data-truth="false">Столько, сколько указано при ее созданиии.
+                                <br><input type="radio" name="sAnswer" data-truth="false">Минимум 1.
+                                <br><input type="radio" name="sAnswer" data-truth="true">Сколько угодно.
+                                <br><input type="radio" name="sAnswer" data-truth="false">Не знаю.
+                            </form>
+                        </div>
+                        <div class="int2" style="display: none">Что такое: "use strict"?
+                            <form class="jsTest2">
+                                <input type="radio" name="thAnswer" data-truth="false">Просто строка.
+                                <br><input type="radio" name="thAnswer" data-truth="false">Фукцния-литерал.
+                                <br><input type="radio" name="thAnswer" data-truth="true">Строгий режим.
+                                <br><input type="radio" name="thAnswer" data-truth="false">Не знаю.
+                            </form>
+                        </div>
+                        <button id="jsTestNextBtn2">Следующий</button>
+                        <button style="display: none" id="jsTestBtn2">Проверить</button>
+                        <button id="jsTestAgainBtn2" style="display: none">Пройти еще раз</button>
+                    </div>
+                </div>
             </div>
             <div class="show-3">
 
@@ -61,16 +196,6 @@
     <!-- JQuery -->
     <script src="scripts/jquery-3.2.1.js"></script>
     <!-- Polyfill for HTML Imports-->
-    <script src="scripts/webcomponentsjs/webcomponents-loader.js"></script>
-
-    <link rel="import" id="work1" href="exampleWorks/notes/notes.html">
-    <link rel="import" id="work2" href="exampleWorks/timer/timer.html">
-    <link rel="import" id="work3" href="exampleWorks/calculator/calculator.html">
-    <link rel="import" id="work4" href="exampleWorks/calendar/calendar.html">
-    <link rel="import" id="work5" href="exampleWorks/gameInNum/gameInNum.html">
-    <link rel="import" id="work6" href="exampleWorks/ticTacToe/ticTacToe.html">
-    <link rel="import" id="work7" href="exampleWorks/interviews/interview1.html">
-    <link rel="import" id="work8" href="exampleWorks/interviews/interview2.html">
 
 </body>
 </html>

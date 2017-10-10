@@ -1,17 +1,19 @@
+"use strict";
 (function () {
 
+    let exDiv = getClass('examples')[0];
     // jsTest
-    let jsTestForms = getClass('jsTest');
+    let jsTestForms = exDiv.getElementsByClassName('jsTest');
     getId('jsTestBtn').onclick = function () {
         jsTestCheck(jsTestForms);
     };
 
     //jsTest2
     let curQuest =0,
-        jsTestForms2 = getClass('jsTest2'),
+        jsTestForms2 = exDiv.getElementsByClassName('jsTest2'),
         jsTestBtn2 = getId('jsTestBtn2'),
         jsTestAgainBtn2 = getId('jsTestAgainBtn2'),
-        jsTestQuest2 = getClass('int2'),
+        jsTestQuest2 = exDiv.getElementsByClassName('int2'),
         numQuest2 = jsTestQuest2.length,
         jsTestNextBtn2 = getId('jsTestNextBtn2');
     jsTestBtn2.onclick = function () {
@@ -26,7 +28,7 @@
         jsTestBtn2.style.display = 'none';
         jsTestQuest2[curQuest].style.display = 'block';
         jsTestNextBtn2.style.display = 'inline';
-        $('#interview2 input:checked').prop('checked',false);
+        $('#view2 input:checked').prop('checked',false);
     };
     jsTestNextBtn2.onclick = function () {
         if(curQuest < numQuest2-1){
@@ -44,8 +46,8 @@
         let jsTestRez = [],
             formsNum = forms.length,
             rightAnsw =0;
-        for (i=0; i<formsNum;i++){
-            for (j=0;j<forms[i].elements.length;j++){
+        for (let i=0; i<formsNum;i++){
+            for (let j=0, len = forms[i].elements.length;j<len;j++){
                 if(forms[i].elements[j].checked){
                     jsTestRez.push(forms[i].elements[j].dataset.truth);
                     break;
@@ -57,7 +59,7 @@
                 rightAnsw++;
         });
         alert('Правильно: ' + (rightAnsw/formsNum*100).toFixed(2) + '% (' + rightAnsw + '/' + formsNum+')');
-        $('#interview1 input:checked').prop('checked',false);
+        $('#view1 input:checked').prop('checked',false);
     }
 })();
 

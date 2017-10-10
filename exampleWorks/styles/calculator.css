@@ -5,6 +5,9 @@
     background-color: lavender;
     border: groove 2px;
 }
+/*div{*/
+    /*background-color: springgreen;*/
+/*}*/
 #calculator > div{
     border: 1px solid;
     margin: 2px;

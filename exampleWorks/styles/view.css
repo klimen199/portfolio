@@ -1,8 +1,8 @@
-#interview1{
+#view1{
     display: inline-block;
     width: 400px;
 }
-#interview2{
+#view2{
     display: inline-block;
     width: 400px;
 }
@@ -11,10 +11,10 @@
 }
 
 @media screen and (min-width: 800px){
-    #interview1{
+    #view1{
         float: left;
     }
-    #interview2 + div{
+    #view2 + div{
         clear: left;
     }
 }

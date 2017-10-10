@@ -102,12 +102,16 @@ div.show-2 > .exampleIcon {
     height: 100px;
     width: 250px;
     background-color: #f8d510;
+    border-radius: 10px;
     margin: 10px 20px;
     text-align: center;
     line-height: 100px;
 }
 div.show-2 > .exampleIcon:hover{
     cursor: pointer;
+}
+#examplWork{
+    display: none;
 }
 div.show-2 > .selected {
     background-color: #ceb010;
